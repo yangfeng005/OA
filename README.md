@@ -6,7 +6,7 @@
 
 ## 项目演示
 
-地址：http://peakcrest.cn:8000/  账号密码：admin/123456
+地址：http://peakcrest.cn:8000   账号密码：admin/123456
 
 ## 技术栈
 
