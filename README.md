@@ -84,15 +84,15 @@ BPMN2.0规范，基于开源camunda流程引擎开发，支持浏览器在线设
 
 在“流程管理”-“表单设计”菜单，新建自定义表单。表单key需以“f_”开头，且不能重复。 
 
-![image-20231017113144160](/images/image-20231017113144160.png)
+![image-20231017113144160](images/image-20231017113144160.png)
 
 新建完成后，点击“设计表单”，然后根据业务设计表单。
 
-![image-20231017113206822](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113206822.png)
+![image-20231017113206822](images/image-20231017113206822.png)
 
 设计的表单如下：
 
-![image-20231017113212410](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113212410.png)
+![image-20231017113212410](images/image-20231017113212410.png)
 
 表单中，每一项的字段ID必填，不允许重复。为了易理解，请修改为见文知意的id，该id在建表时会作为业务表的字段名称。
 
@@ -100,21 +100,21 @@ BPMN2.0规范，基于开源camunda流程引擎开发，支持浏览器在线设
 
 表单设计完成系统自动判断是否需要发布，点击发布按钮，自动更新业务表结构。
 
-![image-20231017113239514](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113239514.png)
+![image-20231017113239514](images/image-20231017113239514.png)
 
 #### **流程设计**
 
 在“流程管理”-“流程设计”菜单，新建流程。
 
-![image-20231017113252981](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113252981.png)
+![image-20231017113252981](images/image-20231017113252981.png)
 
 新建完成后，点击“设计流程”，然后根据业务设计流程。
 
-![image-20231017113300123](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113300123.png)
+![image-20231017113300123](images/image-20231017113300123.png)
 
 设计的流程图如下：
 
-![image-20231017113355505](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113355505.png)
+![image-20231017113355505](images/image-20231017113355505.png)
 
 流程的编号即流程定义key，很重要，需唯一。
 
@@ -122,7 +122,7 @@ BPMN2.0规范，基于开源camunda流程引擎开发，支持浏览器在线设
 
 创建者为：starter，这个流程变量表示流程发起人，在“提交申请”节点用到。
 
-![image-20231017113420362](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113420362.png)
+![image-20231017113420362](images/image-20231017113420362.png)
 
   
 
@@ -138,11 +138,11 @@ BPMN2.0规范，基于开源camunda流程引擎开发，支持浏览器在线设
 
 代理人从流程变量starter自动取值。程序内部做了控制判断，会自动完成该节点的审批。
 
-![image-20231017113450644](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113450644.png)
+![image-20231017113450644](images/image-20231017113450644.png)
 
 表单key和开始节点保持一致，方便驳回时再次填写表单。
 
-![image-20231017113504563](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113504563.png)
+![image-20231017113504563](images/image-20231017113504563.png)
 
   
 
@@ -154,7 +154,7 @@ BPMN2.0规范，基于开源camunda流程引擎开发，支持浏览器在线设
 
 表达式的配置方法：
 
-![image-20231017113526039](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113526039.png)
+![image-20231017113526039](images/image-20231017113526039.png)
 
 查询申请人所属部门内的指定角色人员：${flowExpression.getDepartUserByRole(roleCode)}，roleCode: 角色编码，请在角色管理查看角色编码。
 
@@ -168,7 +168,7 @@ BPMN2.0规范，基于开源camunda流程引擎开发，支持浏览器在线设
 
 同意的表达式配置如下图所示：
 
-![image-20231017113555737](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113555737.png)
+![image-20231017113555737](images/image-20231017113555737.png)
 
 
 
@@ -176,7 +176,7 @@ BPMN2.0规范，基于开源camunda流程引擎开发，支持浏览器在线设
 
 驳回的表达式配置如下图所示：
 
-![image-20231017113616364](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113616364.png)
+![image-20231017113616364](images/image-20231017113616364.png)
 
 
 
@@ -184,9 +184,9 @@ BPMN2.0规范，基于开源camunda流程引擎开发，支持浏览器在线设
 
 ${day>3}：day是流程变量，从请假的表单而来。如果流程流转到当前环节的所有表单中都找不到这个流程变量的话，流程将会异常结束，这个情况需要注意。  
 
-![image-20231017113637883](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113637883.png)
+![image-20231017113637883](images/image-20231017113637883.png)
 
-![image-20231017113652974](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113652974.png)
+![image-20231017113652974](images/image-20231017113652974.png)
 
 
 
@@ -196,47 +196,47 @@ ${day>3}：day是流程变量，从请假的表单而来。如果流程流转到
 
 流程设计完成后，保存流程。  
 
-![image-20231017113730662](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113730662.png)
+![image-20231017113730662](images/image-20231017113730662.png)
 
 保存成功后，部署流程。
 
-![image-20231017113750956](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113750956.png)
+![image-20231017113750956](images/image-20231017113750956.png)
 
 #### 发起流程及流转
 
 在“自定义表单示例”菜单，点击“自定义表单审批”。
 
-![image-20231017113758364](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113758364.png)
+![image-20231017113758364](images/image-20231017113758364.png)
 
 填写表单，点击“提交”。
 
-![image-20231017113807265](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113807265.png)
+![image-20231017113807265](images/image-20231017113807265.png)
 
 由于没有配置办理人，到任务管理，委派任务。
 
-![image-20231017113817873](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113817873.png)
+![image-20231017113817873](images/image-20231017113817873.png)
 
 张三的账号登录后，即可在“待办管理”-“我的待办”，看到待办任务，处理即可。
 
-![image-20231017113840138](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113840138.png)
+![image-20231017113840138](images/image-20231017113840138.png)
 
-![image-20231017113846877](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113846877.png)
+![image-20231017113846877](images/image-20231017113846877.png)
 
-![image-20231017113859534](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113859534.png)
+![image-20231017113859534](images/image-20231017113859534.png)
 
 选择审批结论后，系统会自动获取下一环节办理人，允许重新指定办理人。
 
-![image-20231017113907384](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113907384.png)
+![image-20231017113907384](images/image-20231017113907384.png)
 
 使用系统管理员账号登录后，处理待办任务。
 
-![image-20231017113920125](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113920125.png)
+![image-20231017113920125](images/image-20231017113920125.png)
 
 
 
 可以在“我的发起”中查看流程流转详情。
 
-![image-20231017113934805](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113934805.png)
+![image-20231017113934805](images/image-20231017113934805.png)
 
 至此，流程审批完成。
 
@@ -252,19 +252,19 @@ ${day>3}：day是流程变量，从请假的表单而来。如果流程流转到
 
 新增流程设计：
 
-![image-20231017113950195](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113950195.png)
+![image-20231017113950195](images/image-20231017113950195.png)
 
 路由表单流程开始节点配置的表单key和自定义表单流程不一样，它使用的是vue表单路由。要求通过该路由以及参数能够在浏览器访问到页面。
 
-![image-20231017113958789](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017113958789.png)
+![image-20231017113958789](images/image-20231017113958789.png)
 
-![image-20231017114008792](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017114008792.png)
+![image-20231017114008792](images/image-20231017114008792.png)
 
 提交申请节点表单key保持和开始节点一致。
 
 部门领导审批和公司领导审批可以通过表达式或者固定值的方式设置办理人，如下图所示：
 
-![image-20231017114018146](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017114018146.png)
+![image-20231017114018146](images/image-20231017114018146.png)
 
 其他节点的配置和自定义表单流程配置方法一致，节点表单key可以不能使用自定义的表单。需要注意的是一个流程，允许每个用户节点配置不同的表单key。
 
@@ -276,25 +276,25 @@ ${day>3}：day是流程变量，从请假的表单而来。如果流程流转到
 
 在“路由表单示例”菜单，点击“新增”。填写表单后，点击提交审批。
 
-![image-20231017114029477](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017114029477.png)
+![image-20231017114029477](images/image-20231017114029477.png)
 
 提交审批时，根据配置的流程自动关联到下一步审批节点和办理人，允许重新选择办理人：
 
-![image-20231017114042518](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017114042518.png)
+![image-20231017114042518](images/image-20231017114042518.png)
 
 提交时审批后进入流程流转环节。使用张三账号登录，处理待办任务。
 
-![image-20231017114054540](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017114054540.png)
+![image-20231017114054540](images/image-20231017114054540.png)
 
 处理任务页面会根据路由和提交数据的id渲染页面。
 
 审批完成，流程结束。在“我的发起”查看详情。
 
-![image-20231017114104544](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017114104544.png)
+![image-20231017114104544](images/image-20231017114104544.png)
 
 在路由表单列表，可以看到该记录的审批状态，同时可以查看审批明细。
 
-![image-20231017114118179](/Users/yangfeng/Library/Application Support/typora-user-images/image-20231017114118179.png)
+![image-20231017114118179](images/image-20231017114118179.png)
 
 # 咨询
 
